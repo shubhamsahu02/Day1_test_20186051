@@ -12,4 +12,4 @@ for i in range(len(str_s)-1):
     	g_c = c_co
     	m_c = i
     d_d = m_c-g_c+1
-print("Longest substring in alphabetical order is: ", str(str_s[d_d:d_d+g_c+1]))
+print(str_s[d_d:d_d+g_c+1])
