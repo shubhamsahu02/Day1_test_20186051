@@ -1,4 +1,4 @@
-# Now write a program that calculates the minimum fixed monthly payment needed
+"""# Now write a program that calculates the minimum fixed monthly payment needed
 #in order pay off a credit card balance within 12 months.
 # By a fixed monthly payment, we mean a single number which does not change each month,but instead
 # is a constant amount that will be
@@ -40,6 +40,6 @@ def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print("Lowest Payment:" + str(paying_debt_off_in_a_year(data[0], data[1])))
+    print("Lowest Payment: " + str(paying_debt_off_in_a_year(data[0], data[1])))
 if __name__ == "__main__":
     main()
