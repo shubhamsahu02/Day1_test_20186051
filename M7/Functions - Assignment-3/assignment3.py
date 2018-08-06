@@ -67,3 +67,4 @@ def main():
    print("Lowest Payment: " +str(paying_debtoffinayear(data[0], data[1])))
 if __name__ == "__main__":
    main()
+   
