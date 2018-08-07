@@ -6,19 +6,19 @@ This function takes in one number and returns one number.
 '''
 
 def factorial(num_ber):
-   '''
-   n is positive Integer
+    '''
+    n is positive Integer
 
-   returns: a positive integer, the factorial of n.
-   '''
-   if num_ber == 0:
-       return 1
-   return num_ber* factorial(num_ber-1)
+    returns: a positive integer, the factorial of n.
+    '''
+    if num_ber == 0:
+        return 1
+    return num_ber* factorial(num_ber-1)
 
 def main():
-   """defining main function"""
-   in_put = input()
-   print(factorial(int(in_put)))
+    """defining main function"""
+    in_put = input()
+    print(factorial(int(in_put)))
 
 if __name__ == "__main__":
-   main()
+    main()
