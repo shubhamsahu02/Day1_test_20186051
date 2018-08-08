@@ -13,7 +13,7 @@ def get_guessed_word(secret_word, letters_guessed):
       what letters in secret_word have been guessed so far.
     '''
     # FILL IN YOUR CODE HERE...
-    a = ' '
+    a = ''
     for char in secret_word:
         if char in letters_guessed:
             a += char
