@@ -38,5 +38,5 @@ def main():
         list1.append(data[j][0])
     print(is_word_guessed(secret_word, list1))
 
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
