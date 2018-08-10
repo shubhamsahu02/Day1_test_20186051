@@ -34,7 +34,7 @@ def main():
         l_i=data.split()
         adict[l_i[0]]=int(l_i[1])
     data1=input()
-    print(u_h(adict,data1))
+    print(u_h(adict, data1))
 
 if __name__ == "__main__":
     main()
