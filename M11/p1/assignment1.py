@@ -24,12 +24,12 @@ def get_word_score(word, n_n):
     's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10
     }
     sum_0 = 0
-    l_l=len(word)
+    l_l = len(word)
     for j in word:
         if j in scrabble_values:
             sum_0 = sum_0 + scrabble_values[j]
     if n_n == l_l:
-        sum_0 = sum_0*l_l
+        sum_0 = sum_0 * l_l
         return sum_0 + 50
     return sum_0 * l_l
 def main():
