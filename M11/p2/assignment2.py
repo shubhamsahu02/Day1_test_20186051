@@ -18,7 +18,7 @@ def u_h(hand, word):
     Has no side effects: does notmodify hand.
 
     word: string
-    hand: dictionary (string -> int) 
+    hand: dictionary (string -> int)
     returns: dictionary (string -> int)
     """
       # TO DO ... <-- Remove this comment when you code this function
