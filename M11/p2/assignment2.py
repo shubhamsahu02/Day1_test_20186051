@@ -27,13 +27,13 @@ def u_h(hand, word):
 
 def main():
     """function"""
-    n_i=input()
-    adict={}
+    n_i = input()
+    adict = {}
     for _ in range(int(n_i)):
-        data=input()
-        l_i=data.split()
+        data = input()
+        l_i = data.split()
         adict[l_i[0]]=int(l_i[1])
-    data1=input()
+    data1 = input()
     print(u_h(adict, data1))
 
 if __name__ == "__main__":
