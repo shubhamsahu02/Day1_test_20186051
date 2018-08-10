@@ -5,9 +5,8 @@
 
 
 def calculate_hand_len(hand):
-    """ 
+    """
     Returns the length (number of letters) in the current hand.
-    
     hand: dictionary (string int)
     returns: integer
     """
@@ -26,8 +25,6 @@ def main():
         l_l = data.split()
         adict[l_l[0]] = int(l_l[1])
     print(calculate_hand_len(adict))
-        
-
 
 if __name__ == "__main__":
     main()
