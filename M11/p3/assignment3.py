@@ -7,7 +7,7 @@ Testing: Make sure the test_isValidWord tests pass. In addition, you will want t
 Fill in the code for isValidWord in ps4a.py and be sure you've passed the appropriate tests in test_ps4a.py before pasting your function definition here.
 '''
 
-def isValidWord(word, hand, wordList):
+def isValidWord(word, hand, word_list):
     """
     Returns True if word is in the wordList and is entirely
     composed of letters in the hand. Otherwise, returns False.
