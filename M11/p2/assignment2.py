@@ -35,8 +35,6 @@ def main():
         adict[l_i[0]]=int(l_i[1])
     data1=input()
     print(u_h(adict,data1))
-        
-
 
 if __name__ == "__main__":
     main()
