@@ -24,11 +24,11 @@ def isValidWord(word, hand, word_list):
 
     count = 0
     for char in word:
-      if char in hand:
-          count += 1
+        if char in hand:
+            count += 1
     if count == len(word):
         if word in word_list:
-          return True
+            return True
     return False
     
 
