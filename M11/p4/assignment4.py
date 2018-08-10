@@ -16,15 +16,15 @@ def calculateHandlen(hand):
     return sum_val
 
 def main():
-    n=input()
-    adict={}
-    for i in range(int(n)):
-        data=input()
-        l=data.split()
-        adict[l[0]]=int(l[1])
+    n = input()
+    adict = {}
+    for _ in range(int(n)):
+        data = input()
+        l = data.split()
+        adict[l[0]] = int(l[1])
     print(calculateHandlen(adict))
         
 
 
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
