@@ -32,7 +32,7 @@ def main():
     for _ in range(int(n_i)):
         data = input()
         l_i = data.split()
-        adict[l_i[0]]=int(l_i[1])
+        adict[l_i[0]] = int(l_i[1])
     data1 = input()
     print(u_h(adict, data1))
 
