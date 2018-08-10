@@ -2,7 +2,6 @@
 '''
 At this point, we have written code to generate a random hand and display that hand to the user.
 # We can also ask the user for a word (Python's input) and score the word (using your getWordScore).
-#Fill in the code for isValidWord in ps4a.py and be sure you've passed the appropriate tests in test_ps4a.py before pasting your function definition here.
 '''
 
 def is_valid_word(word, hand, word_list):
@@ -37,6 +36,5 @@ def main():
         adict[l_l[0]] = int(l_l[1])
     l2_h = input().split()
     print(is_valid_word(word, adict, l2_h))
-      
 if __name__ == "__main__":
     main()
