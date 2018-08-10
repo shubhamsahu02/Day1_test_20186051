@@ -27,6 +27,7 @@ def is_valid_word(word, hand, word_list):
     return False
 
 def main():
+    """function"""
     word = input()
     n_e = int(input())
     adict = {}
