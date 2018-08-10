@@ -1,6 +1,8 @@
 # Assignment-3
 '''
-At this point, we have written code to generate a random hand and display that hand to the user. We can also ask the user for a word (Python's input) and score the word (using your getWordScore). However, at this point we have not written any code to verify that a word given by a player obeys the rules of the game. A valid word is in the word list; and it is composed entirely of letters from the current hand. Implement the isValidWord function.
+At this point, we have written code to generate a random hand and display that hand to the user.
+# We can also ask the user for a word (Python's input) and score the word (using your getWordScore).
+#However, at this point we have not written any code to verify that a word given by a player obeys the rules of the game. A valid word is in the word list; and it is composed entirely of letters from the current hand. Implement the isValidWord function.
 
 Testing: Make sure the test_isValidWord tests pass. In addition, you will want to test your implementation by calling it multiple times on the same hand - what should the correct behavior be? Additionally, the empty string ('') is not a valid word - if you code this function correctly, you shouldn't need an additional check for this condition.
 
@@ -26,23 +28,23 @@ def isValidWord(word, hand, word_list):
           count += 1
     if count == len(word):
         if word in word_list:
-            return True
+          return True
     return False
     
 
 
 def main():
-	word = input()
-	n_e = int(input())
-	adict = {}
-	for i in range(n_e):
-		data = input()
-		l_l = data.split()
-		adict[l_l[0]] = int(l_l[1])
-	l2_h = input().split()
-	print(isValidWord(word,adict,l2_h))
-		
+    word = input()
+    n_e = int(input())
+    adict = {}
+    for _ in range(n_e):
+        data = input()
+        l_l = data.split()
+        adict[l_l[0]] = int(l_l[1])
+    l2_h = input().split()
+    print(isValidWord(word,adict,l2_h))
+        
 
 
 if __name__ == "__main__":
-	main()
+    main()
