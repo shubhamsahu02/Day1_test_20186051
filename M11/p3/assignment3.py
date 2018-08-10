@@ -9,7 +9,7 @@ At this point, we have written code to generate a random hand and display that h
 #Fill in the code for isValidWord in ps4a.py and be sure you've passed the appropriate tests in test_ps4a.py before pasting your function definition here.
 '''
 
-def isValidWord(word, hand, word_list):
+def is_Valid_Word(word, hand, word_list):
     """
     Returns True if word is in the wordList and is entirely
     composed of letters in the hand. Otherwise, returns False.
@@ -39,7 +39,7 @@ def main():
         l_l = data.split()
         adict[l_l[0]] = int(l_l[1])
     l2_h = input().split()
-    print(isValidWord(word, adict, l2_h))
+    print(is_Valid_Word(word, adict, l2_h))
         
 if __name__ == "__main__":
     main()
