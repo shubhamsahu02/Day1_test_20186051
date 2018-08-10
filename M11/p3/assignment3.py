@@ -32,17 +32,17 @@ def isValidWord(word, hand, word_list):
 
 
 def main():
-	word=input()
-	n=int(input())
-	adict={}
+	word = input()
+	n = int(input())
+	adict = {}
 	for i in range(n):
-		data=input()
-		l=data.split()
-		adict[l[0]]=int(l[1])
-	l2=input().split()
+		data = input()
+		l = data.split()
+		adict[l[0]] = int(l[1])
+	l2 = input().split()
 	print(isValidWord(word,adict,l2))
 		
 
 
-if __name__== "__main__":
+if __name__ == "__main__":
 	main()
