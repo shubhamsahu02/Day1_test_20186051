@@ -50,6 +50,7 @@ def create_social_network(data):
     #   b_dict[i] = set(b_dict[i])
     #return b_dict
 
+
 def main():
     '''
         handling testcase input and printing output
