@@ -51,7 +51,7 @@ def create_social_network(data):
     #return b_dict
 
 
-def main():
+    def main():
     '''
         handling testcase input and printing output
     '''
