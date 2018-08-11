@@ -40,12 +40,12 @@ def create_social_network(data):
     #print("enter dictionary values")
     b_dict = {}
     for i in range(inp_a):
-        data = input("")
-        l = data.split("follows")
+        data = input('')
+        l = data.split('follows')
         if l[0] not in b_dict:
-            b_dict[l[0]] = l[1].split(",")
+            b_dict[l[0]] = l[1].split(',')
         else:
-            b_dict[l[0]].append((l[1]).split(","))
+            b_dict[l[0]].append((l[1]).split(','))
     for i in b_dict:
         b_dict[i] = set(b_dict[i])
     print(b_dict)
