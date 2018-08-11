@@ -33,7 +33,7 @@ def create_social_network(data):
     '''
 
     # remove the pass below and start writing your code
-    
+
 
     #print ("Enter range")
     inp_a = int(input())
@@ -41,11 +41,11 @@ def create_social_network(data):
     b_dict = {}
     for i in range(inp_a):
         data = input('')
-        l = data.split('follows')
-        if l[0] not in b_dict:
-            b_dict[l[0]] = l[1].split(',')
+        l_l = data.split(' follows ')
+        if l_l[0] not in b_dict:
+            b_dict[l[0]] = l_l[1].split(',')
         else:
-            b_dict[l[0]].append((l[1]).split(','))
+            b_dict[l_l[0]].append((l_l[1]).split(','))
     for i in b_dict:
         b_dict[i] = set(b_dict[i])
     print(b_dict)
