@@ -47,7 +47,7 @@ def create_social_network(data):
         else:
             b_dict[l_l[0]].append((l_l[1]).split(','))
     for i in b_dict:
-    #b_dict[i] = set(b_dict[i])
+    #   b_dict[i] = set(b_dict[i])
     #return b_dict
 
 
