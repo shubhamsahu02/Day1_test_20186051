@@ -43,7 +43,7 @@ def create_social_network(data):
         data = input('')
         l_l = data.split(' follows ')
         if l_l[0] not in b_dict:
-            b_dict[l[0]] = l_l[1].split(',')
+            b_dict[l_l[0]] = l_l[1].split(',')
         else:
             b_dict[l_l[0]].append((l_l[1]).split(','))
     for i in b_dict:
