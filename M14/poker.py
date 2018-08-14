@@ -29,7 +29,7 @@ def is_straight(hand):
 
     hand_cards_values
 """
-    card_value = set(['--23456789TJQKA'.index(c) for c, s in hand])
+    card_value = set('--23456789TJQKA'.index(c) for c, s in hand)
     short = card_value
     # card_value_praveen = set(card_value_praveen)
     return len(short) == len(hand) and (max(short)-min(short) == 4)
@@ -116,4 +116,3 @@ if __name__ == "__main__":
         HANDS.append(ha)
     # test the poker function to see how it works
     print(' '.join(poker(HANDS)))
-    
