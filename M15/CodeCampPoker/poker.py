@@ -1,30 +1,30 @@
 # import collections
 
 def card_value_hand(hand):
-    '''calculates card values'''
-    exception_case = [2, 3, 4, 5, 14]
-    card_value = ['--23456789TJQKA'.index(c) for c, s in hand]
-    if card_value == exception_case:
-        card_value.remove(14)
-        card_value.add(1)
-    card_value = sorted(card_value, reverse=True)
-    return card_value
+   '''calculates card values'''
+   exception_case = [2, 3, 4, 5, 14]
+   card_value = ['--23456789TJQKA'.index(c) for c, s in hand]
+   if card_value == exception_case:
+       card_value.remove(14)
+       card_value.add(1)
+   card_value = sorted(card_value, reverse=True)
+   return card_value
 
- def is_straight(hand):
-    ''' Straight function '''
-    return len(card_value_hand(hand)) == 5 and (max(card_value_hand(
-        hand))-min(card_value_hand(hand)) == 4)
+def is_straight(hand):
+   ''' Straight function '''
+   return len(card_value_hand(hand)) == 5 and (max(card_value_hand(
+       hand))-min(card_value_hand(hand)) == 4)
 
- def is_flush(hand):
-    ''' flush function '''
-    return len(set(s for c, s in hand)) == 1
+def is_flush(hand):
+   ''' flush function '''
+   return len(set(s for c, s in hand)) == 1
 
- def kind(hand, n_len):
-    ''' To determine the kind of the function'''
-    for ranks in card_value_hand(hand):
-        if card_value_hand(hand).count(ranks) == n_len:
-            return ranks
-    return None
+def kind(hand, n_len):
+   ''' To determine the kind of the function'''
+   for ranks in card_value_hand(hand):
+       if card_value_hand(hand).count(ranks) == n_len:
+           return ranks
+   return None
 
 # def is_four_of_a_kind(hand):
 #     ''' Four of a kind hand function '''
