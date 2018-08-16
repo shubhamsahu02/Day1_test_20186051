@@ -53,7 +53,7 @@ def hand_rank(hand):
    ''' ranks the card '''
    hand_ranks = card_value_hand(hand)
    rank = (0, hand_ranks)
-   if is_flush(hand) and isstraight(hand):       
+   if is_flush(hand) and is_straight(hand):       
        rank = (8,)
 
    elif kind(hand, 4):
