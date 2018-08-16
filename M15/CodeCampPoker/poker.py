@@ -71,7 +71,7 @@ def hand_rank(hand):
    elif kind(hand, 3):  
        return (3, kind(hand, 2), hand_ranks)
 
-   elif kin(hand, 2) and kind(sorted(hand, reverse=True), 2) and kind(\
+   elif kind(hand, 2) and kind(sorted(hand, reverse=True), 2) and kind(\
    hand, 2) != kind(sorted(hand, reverse=True), 2):     
        return (2, kind(hand, 2), kind(sorted(hand, reverse=True), 2))
 
