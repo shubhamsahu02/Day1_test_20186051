@@ -1,4 +1,4 @@
-# import collections
+"""# import collections"""
 
 def card_value_hand(hand):
     '''calculates card values'''
@@ -72,7 +72,7 @@ def hand_rank(hand):
         return (3, kind(hand, 2), hand_ranks)
 
     elif kind(hand, 2) and kind(sorted(hand, reverse=True), 2) and kind(\
-    hand, 2) != kind(sorted(hand, reverse=True), 2):     
+    hand, 2) != kind(sorted(hand, reverse=True), 2):
         return (2, kind(hand, 2), kind(sorted(hand, reverse=True), 2))
 
     elif kind(hand, 2):
@@ -101,4 +101,3 @@ if __name__ == "__main__":
         HANDS.append(ha)
     # test the poker function to see how it works
     print(' '.join(poker(HANDS)))
-    
