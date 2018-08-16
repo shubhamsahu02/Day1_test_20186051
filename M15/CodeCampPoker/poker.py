@@ -49,35 +49,35 @@ def kind(hand, n_len):
 #     bool_val = sorted(list(collections.Counter(card_value_hand(hand)).values())) == [1, 1, 1, 2]
 #     return bool_val
 
-def hand_rank(hand):
-   ''' ranks the card '''
-   hand_ranks = card_value_hand(hand)
-   rank = (0, hand_ranks)
-   if is_flush(hand) and is_straight(hand):       
-       rank = (8,)
+ def hand_rank(hand):
+    ''' ranks the card '''
+    hand_ranks = card_value_hand(hand)
+    rank = (0, hand_ranks)
+    if is_flush(hand) and is_straight(hand):       
+        rank = (8,)
 
-   elif kind(hand, 4):
-       rank = (7,)
+    elif kind(hand, 4):
+        rank = (7,)
 
-   elif kind(hand, 3) and kind(hand, 2):    
-       rank = (6, )
+    elif kind(hand, 3) and kind(hand, 2):    
+        rank = (6, )
 
-   elif is_flush(hand):
-       rank = (5, hand_ranks)
+    elif is_flush(hand):
+        rank = (5, hand_ranks)
 
-   elif is_straight(hand): 
-       rank = (4, hand_ranks)
+    elif is_straight(hand): 
+        rank = (4, hand_ranks)
 
-   elif kind(hand, 3):  
-       return (3, kind(hand, 2), hand_ranks)
+    elif kind(hand, 3):  
+        return (3, kind(hand, 2), hand_ranks)
 
-   elif kind(hand, 2) and kind(sorted(hand, reverse=True), 2) and kind(\
-   hand, 2) != kind(sorted(hand, reverse=True), 2):
-       return (2, kind(hand, 2), kind(sorted(hand, reverse=True), 2))
+    elif kind(hand, 2) and kind(sorted(hand, reverse=True), 2) and kind(\
+    hand, 2) != kind(sorted(hand, reverse=True), 2):
+        return (2, kind(hand, 2), kind(sorted(hand, reverse=True), 2))
 
-   elif kind(hand, 2): 
-       return (1, kind(hand, 2))
-   return rank
+    elif kind(hand, 2): 
+        return (1, kind(hand, 2))
+    return rank
 
 def poker(hands):
    '''
