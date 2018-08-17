@@ -15,7 +15,7 @@ def clean(input_string):
 	return list_of_words
 	
 
-def remove_stop words(list_of_words):
+def remove_stop(list_of_words):
 	stop_words = load_stopwords('stopwords.txt')
 	for each_word in list_of_words:
 		if each_word in stop_words:
