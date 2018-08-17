@@ -29,7 +29,7 @@ def word_freq(list_of_words, index, dictionary):
 	return dictionary
 
 def computation(dictionary):
-    numerator = sum([value[0]*value[1]] for value in dictionary.values())
+    numerator = sum(value[0]*value[1] for value in dictionary.values())
     denominator1 = math.sqrt(sum(value[0]**2 for value in dictionary.values()))
     denominator2 = math.sqrt(sum(value[1]**2 for value in dictionary.values()))
     return numerator / (denominator1*denominator2)
