@@ -4,60 +4,64 @@
 import re
 import math
 
-
-def clean(input_string):
-    input_string = input_string.lower()
+def string_opr(inp_str):
+    '''string operations'''
     regex = re.compile('[^a-z ]')
-    input_string = regex.sub('', input_string)
-    list_of_words = input_string.split(' ')
-    for each_word_index in range(len(list_of_words)):
-        list_of_words[each_word_index] = list_of_words[each_word_index].strip()
-    return list_of_words
+    return [regex.sub('', eachword.strip()) for eachword in inp_str.lower().split(' ')]
 
-def remove_stop(list_of_words):
+def remove_stopword(word_list):
+    '''removing stopwords'''
+    # print(word_list)
     stop_words = load_stopwords('stopwords.txt')
-    for each_word in list_of_words:
-        if each_word in stop_words:
-            list_of_words.remove(each_word)
-    return list_of_words
+    for each_word in stop_words:
+        while each_word in word_list:
+            word_list.remove(each_word)
+    # print(word_list)
+    return word_list
 
-def word_freq(list_of_words, index, dictionary):
-    for each_word in list_of_words:
-        if each_word != "":
-            if each_word not in dictionary:
-                dictionary[each_word] = [0, 0]
-        dictionary[each_word][index] += 1
-    return dictionary
+def word_freq(word_list, ind, dict):
+    '''finding the word frequency'''
+    for each_wrd in word_list:
+        if each_wrd != '':
+            if each_wrd not in dict:
+                dict[each_wrd] = [0, 0]
+            dict[each_wrd][ind] += 1
+    return dict
+
 
 def computation(dictionary):
+    '''computing the similarity value'''
     numerator = sum(value[0]*value[1] for value in dictionary.values())
-    denominator1 = math.sqrt(sum(value[0]**2 for value in dictionary.values()))
-    denominator2 = math.sqrt(sum(value[1]**2 for value in dictionary.values()))
-    return numerator / (denominator1*denominator2)
+    denom_1 = math.sqrt(sum(value[0]**2 for value in dictionary.values()))
+    denom_2 = math.sqrt(sum(value[1]**2 for value in dictionary.values()))
+    # print(numerator, denom_2, denom_1)
+    return numerator/(denom_1*denom_2)
 
 def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
     '''
-    input_1 = clean(dict1)
-    input_2 = clean(dict2)
+    input_1 = string_opr(dict1)
+    input_2 = string_opr(dict2)
 
-    input_1 = remove_stop(input_1)
-    input_2 = remove_stop(input_2)
+    # print(input_2, input_1)
+
+    input_1 = remove_stopword(input_1)
+    input_2 = remove_stopword(input_2)
 
     dictionary = {}
     dictionary = word_freq(input_1, 0, dictionary)
     dictionary = word_freq(input_2, 1, dictionary)
+    # print_dic(dictionary)
     return computation(dictionary)
 
-
-def load_stopwords(filename):
+def load_stopwords(file_name):
     '''
         loads stop words from a file and returns a dictionary
     '''
     stopwords = {}
-    with open(filename, 'r') as filename:
-        for line in filename:
+    with open(file_name, 'r') as file_name:
+        for line in file_name:
             stopwords[line.strip()] = 0
     return stopwords
 
