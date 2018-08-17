@@ -13,15 +13,13 @@ def clean(input_string):
 	for each_word_index in range(len(list_of_words)):
 		list_of_words[each_word_index] = list_of_words[each_word_index].strip()
 	return list_of_words
-	
 
 def remove_stop(list_of_words):
 	stop_words = load_stopwords('stopwords.txt')
 	for each_word in list_of_words:
 		if each_word in stop_words:
 			list_of_words.remove(each_word)
-	return list_of_words	
-	
+	return list_of_words
 
 def word_freq(list_of_words, index, dictionary):
 	for each_word in list_of_words:
@@ -34,7 +32,7 @@ def computation(dictionary):
     numerator = sum([value[0]*value[1]] for value in dictionary.values())
     denominator1 = math.sqrt(sum(value[0]**2 for value in dictionary.values()))
     denominator2 = math.sqrt(sum(value[1]**2 for value in dictionary.values()))
-    return numerator / (denominator1/denominator2)
+    return numerator / (denominator1*denominator2)
 def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
@@ -71,4 +69,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
