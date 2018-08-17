@@ -4,29 +4,29 @@
 import re
 import math
 
-def string_opr(inp_str):
+def str_op(inp_str):
     '''string operations'''
     regex = re.compile('[^a-z ]')
     return [regex.sub('', eachword.strip()) for eachword in inp_str.lower().split(' ')]
 
-def remove_stopword(word_list):
+def remove_stop(word_list):
     '''removing stopwords'''
     # print(word_list)
-    stop_words = load_stopwords('stopwords.txt')
+    stop_words = load_stop('stopwords.txt')
     for each_word in stop_words:
         while each_word in word_list:
             word_list.remove(each_word)
     # print(word_list)
     return word_list
 
-def word_freq(word_list, ind, dict):
+def word_freq(word_list, ind, dic):
     '''finding the word frequency'''
     for each_wrd in word_list:
         if each_wrd != '':
-            if each_wrd not in dict:
-                dict[each_wrd] = [0, 0]
-            dict[each_wrd][ind] += 1
-    return dict
+            if each_wrd not in dic:
+                dic[each_wrd] = [0, 0]
+            dic[each_wrd][ind] += 1
+    return dic
 
 
 def computation(dictionary):
@@ -41,13 +41,13 @@ def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
     '''
-    input_1 = string_opr(dict1)
-    input_2 = string_opr(dict2)
+    input_1 = str_op(dict1)
+    input_2 = str_op(dict2)
 
     # print(input_2, input_1)
 
-    input_1 = remove_stopword(input_1)
-    input_2 = remove_stopword(input_2)
+    input_1 = remove_stop(input_1)
+    input_2 = remove_stop(input_2)
 
     dictionary = {}
     dictionary = word_freq(input_1, 0, dictionary)
@@ -55,13 +55,13 @@ def similarity(dict1, dict2):
     # print_dic(dictionary)
     return computation(dictionary)
 
-def load_stopwords(file_name):
+def load_stop(file_name):
     '''
         loads stop words from a file and returns a dictionary
     '''
     stopwords = {}
-    with open(file_name, 'r') as file_name:
-        for line in file_name:
+    with open(file_name, 'r') as file:
+        for line in file:
             stopwords[line.strip()] = 0
     return stopwords
 
