@@ -29,7 +29,7 @@ def freq(word_list, ind, dic):
     return dic
 
 
-def Compute(dictionary):
+def comp_ute(dictionary):
     '''computing the similarity value'''
     numerator = sum(value[0]*value[1] for value in dictionary.values())
     denom_1 = math.sqrt(sum(value[0]**2 for value in dictionary.values()))
@@ -39,7 +39,7 @@ def Compute(dictionary):
 
 def similarity(dict1, dict2):
     '''
-        Compute the document distance as given in the PDF
+        comp_ute the document distance as given in the PDF
     '''
     input_1 = str_op(dict1)
     input_2 = str_op(dict2)
@@ -53,7 +53,7 @@ def similarity(dict1, dict2):
     dictionary = freq(input_1, 0, dictionary)
     dictionary = freq(input_2, 1, dictionary)
     # print_dic(dictionary)
-    return Compute(dictionary)
+    return comp_ute(dictionary)
 
 def load_stop(file_name):
     '''
