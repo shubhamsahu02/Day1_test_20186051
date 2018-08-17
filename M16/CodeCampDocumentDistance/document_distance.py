@@ -32,7 +32,11 @@ def computation(dictionary):
     numerator = sum(value[0]*value[1] for value in dictionary.values())
     denominator1 = math.sqrt(sum(value[0]**2 for value in dictionary.values()))
     denominator2 = math.sqrt(sum(value[1]**2 for value in dictionary.values()))
+    print numerator
+    print denominator1
+    print denominator2
     return numerator / (denominator1*denominator2)
+
 def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
