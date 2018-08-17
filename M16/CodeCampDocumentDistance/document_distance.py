@@ -23,8 +23,9 @@ def remove_stop(list_of_words):
 
 def word_freq(list_of_words, index, dictionary):
     for each_word in list_of_words:
-        if each_word !="" and each_word not in dictionary:
-            dictionary[each_word] = [0,0]
+        if each_word !="":
+            if each_word not in dictionary:
+                dictionary[each_word] = [0,0]
         dictionary[each_word][index] += 1
     return dictionary
 
