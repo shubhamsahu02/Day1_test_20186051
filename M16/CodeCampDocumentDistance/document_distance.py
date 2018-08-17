@@ -7,12 +7,11 @@ import math
 
 def clean(input_string):
     input_string = input_string.lower()
-    regex = re.compile('[^a-z]')
+    regex = re.compile('[^a-z ]')
     input_string = regex.sub('', input_string)
-    list_of_words = input_string.split()
+    list_of_words = input_string.split(' ')
     for each_word_index in range(len(list_of_words)):
         list_of_words[each_word_index] = list_of_words[each_word_index].strip()
-    print (list_of_words)
     return list_of_words
 
 def remove_stop(list_of_words):
