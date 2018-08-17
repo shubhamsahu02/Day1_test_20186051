@@ -19,7 +19,7 @@ def remove_stop(word_list):
     # print(word_list)
     return word_list
 
-def word_freq(word_list, ind, dic):
+def freq(word_list, ind, dic):
     '''finding the word frequency'''
     for each_wrd in word_list:
         if each_wrd != '':
@@ -29,7 +29,7 @@ def word_freq(word_list, ind, dic):
     return dic
 
 
-def computation(dictionary):
+def Compute(dictionary):
     '''computing the similarity value'''
     numerator = sum(value[0]*value[1] for value in dictionary.values())
     denom_1 = math.sqrt(sum(value[0]**2 for value in dictionary.values()))
@@ -50,10 +50,10 @@ def similarity(dict1, dict2):
     input_2 = remove_stop(input_2)
 
     dictionary = {}
-    dictionary = word_freq(input_1, 0, dictionary)
-    dictionary = word_freq(input_2, 1, dictionary)
+    dictionary = freq(input_1, 0, dictionary)
+    dictionary = freq(input_2, 1, dictionary)
     # print_dic(dictionary)
-    return computation(dictionary)
+    return Compute(dictionary)
 
 def load_stop(file_name):
     '''
