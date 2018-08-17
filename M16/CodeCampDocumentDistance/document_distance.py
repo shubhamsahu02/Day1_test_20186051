@@ -6,27 +6,27 @@ import math
 
 
 def clean(input_string):
-	input_string = input_string.lower()
-	regex = re.compile('[^a-z]')
-	input_string = regex.sub('', input_string)
-	list_of_words = input_string.split()
-	for each_word_index in range(len(list_of_words)):
-		list_of_words[each_word_index] = list_of_words[each_word_index].strip()
-	return list_of_words
+    input_string = input_string.lower()
+    regex = re.compile('[^a-z]')
+    input_string = regex.sub('', input_string)
+    list_of_words = input_string.split()
+    for each_word_index in range(len(list_of_words)):
+        list_of_words[each_word_index] = list_of_words[each_word_index].strip()
+    return list_of_words
 
 def remove_stop(list_of_words):
-	stop_words = load_stopwords('stopwords.txt')
-	for each_word in list_of_words:
-		if each_word in stop_words:
-			list_of_words.remove(each_word)
-	return list_of_words
+    stop_words = load_stopwords('stopwords.txt')
+    for each_word in list_of_words:
+        if each_word in stop_words:
+            list_of_words.remove(each_word)
+    return list_of_words
 
 def word_freq(list_of_words, index, dictionary):
-	for each_word in list_of_words:
-		if each_word !="" and each_word not in dictionary:
-			dictionary[each_word] = [0,0]
-		dictionary[each_word][index] += 1
-	return dictionary
+    for each_word in list_of_words:
+        if each_word !="" and each_word not in dictionary:
+            dictionary[each_word] = [0,0]
+        dictionary[each_word][index] += 1
+    return dictionary
 
 def computation(dictionary):
     numerator = sum(value[0]*value[1] for value in dictionary.values())
