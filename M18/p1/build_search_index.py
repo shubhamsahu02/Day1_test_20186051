@@ -25,11 +25,11 @@ import re
 def del_stopwords(docs):
 
 # helper function to load the stop words from a file
-s_words = load_stopwords('stopwords.txt')
-for s_word in s_words:
-    if s_word in docs:
-        del docs[s_word]
-    return docs
+ s_words = load_stopwords('stopwords.txt')
+ for word in s_words:
+     if word in docs:
+         del docs[word]
+     return docs
 
 def load_stopwords(filename):
     '''
@@ -76,7 +76,6 @@ def build_search_index(docs):
     for i in doc:
         word_count = doc.count[i]
         if i in dict1:
-            
         else:
             dict1[i] = [(1,index)]
     dict1 = del_stop(dict1)
