@@ -1,6 +1,6 @@
 '''
     Tiny Search Engine - Part 2 - Search
-    In this programming assingment you are given the search index and search queries as input.
+In this programming assingment you are given the search index and search queries as input.
     Complete the program below to search in the index. Don't worry, it is explained below.
     A search index is a python dictionary.
     The keys of this dictionary are words contained in ALL the input text documents.
