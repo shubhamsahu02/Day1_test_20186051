@@ -28,7 +28,7 @@ def del_stopwords(docs):
     s_words = load_stopwords('stopwords.txt')
     for word in s_words:
         while word in docs:
-            doc.remove(word)
+            docs.remove(word)
     return docs
 
 def load_stopwords(filename):
