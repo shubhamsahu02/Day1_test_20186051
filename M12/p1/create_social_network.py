@@ -36,11 +36,12 @@ def create_social_network(data):
     b_dict = {}
     for _ in range(inp_a):
         data = input('')
-        l_l = data.split(' follows ')
-        if l_l[0] not in b_dict:
-            b_dict[l_l[0]] = l_l[1].split(',')
-        else:
-            b_dict[l_l[0]].append((l_l[1]).split(','))
+        if " follows " in data:
+            l_l = data.split(' follows ')
+            if l_l[0] not in b_dict:
+                b_dict[l_l[0]] = l_l[1].split(',')
+            else:
+                b_dict[l_l[0]].append((l_l[1]).split(','))
     #for i in b_dict:
     #    b_dict[i] = set(b_dict[i])
     return b_dict
