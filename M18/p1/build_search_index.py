@@ -48,8 +48,8 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-   regex = re.compile('[^a-z ]')
-   return [regex.sub('',eachword.strip()) for eachword in text.lower().split(' ')]
+    regex = re.compile('[^a-z ]')
+    return [regex.sub('',eachword.strip()) for eachword in text.lower().split(' ')]
 
 def build_search_index(docs):
     '''
