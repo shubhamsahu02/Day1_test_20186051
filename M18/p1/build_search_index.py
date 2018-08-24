@@ -48,8 +48,8 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-   #regex = re.compile('[^a-z]')
-   #return [regex.sub('',eachword.strip()) for eachword in text.lower().split(' ')]
+   regex = re.compile('[^a-z ]')
+   return [regex.sub('',eachword.strip()) for eachword in text.lower().split(' ')]
 
 def build_search_index(docs):
     '''
@@ -71,14 +71,15 @@ def build_search_index(docs):
     length = len(docs)
     for index in range(length):
         doc = word_list(docs[index])
-# helper function to print the search index
-# use this to verify how the search index looks
-    for i in doc:
-        word_count = doc.count[i]
-        if i in dict1:
-        else:
-            dict1[i] = [(1,index)]
-    dict1 = del_stop(dict1)
+        # helper function to print the search index
+        # use this to verify how the search index looks
+        for i in doc:
+            word_count = doc.count(doc[i])
+            if i in dict1:
+                dict1[i].append([(word_count,index)])
+            else:
+                dict1[i] = [(word_count,index)]
+    # dict1 = del_stop(dict1)
     return dict1
 
 

@@ -2,9 +2,9 @@
 Number of times bob occurs is: 2'''
 
 COUNT = 0
-S_V = input()
-S_V2 = 'bob'
-for i in range(len(S_V)):
-    if S_V2 == S_V[i:i+3]:
+inp_str = input()
+comp_str = 'bob'
+for i in range(len(inp_str)):
+    if comp_str == inp_str[i:i+3]:
         COUNT += 1
 print(COUNT)
