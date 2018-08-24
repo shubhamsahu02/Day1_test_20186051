@@ -74,7 +74,7 @@ def build_search_index(docs):
         # helper function to print the search index
         # use this to verify how the search index looks
         for i in doc:
-            word_count = doc.count(doc[i])
+            word_count = doc.count(i)
             if i in dict1:
                 dict1[i].append([(word_count,index)])
             else:
