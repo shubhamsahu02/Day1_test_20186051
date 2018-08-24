@@ -77,8 +77,8 @@ def build_search_index(docs):
         for i in doc:
             word_count = doc.count(i)
             if i in dict1:
-                if (index, word_count) not in dict1[i]:
-                    dict1[i].append((index, word_count))
+                if (word_count,index) not in dict1[i]:
+                    dict1[i].append((word_count,index))
             else:
                 dict1[i] = [(word_count,index)]
     # dict1 = del_stop(dict1)
