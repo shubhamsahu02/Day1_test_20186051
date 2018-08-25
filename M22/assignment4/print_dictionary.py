@@ -13,6 +13,7 @@ def print_dictionary(dictionary):
 
 
 def main():
+    '''function'''
     dictionary = eval(input())
     print_dictionary(dictionary)
 
