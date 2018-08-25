@@ -6,7 +6,7 @@ import re
 def clean_string(string):
 	s = ""
 	for i in string:
-    regex = re.compile('[^a-z ]')
+    regex = re.compile('[^a-z]')
     return [regex.sub('', eachword.strip()) for eachword in inp_str.lower().split(' ')]
 
 def main():
