@@ -17,7 +17,7 @@ def tokenize(string):
 
 def main():
     '''a'''
-    _ = int(input)
+    lines = int(input)
     inp_string = input()
     text = ''.join(inp_string)
     text.split()
