@@ -4,6 +4,7 @@ alphabets in both upper and lower case and numbers.
 '''
 import re
 def clean_string(string):
+    '''function to remove special characters'''
     str_ing = ""
 
     for i in string:
