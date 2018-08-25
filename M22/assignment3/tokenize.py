@@ -13,7 +13,7 @@ def tokenize(string,lines):
             dictionary[word] = 1
     return dictionary
 
-            
+
 def main():
     lines = int(input)
     inp_string = input()
@@ -22,8 +22,6 @@ def main():
     print(tokenize(text))
 
 
-
-    
 
 if __name__ == '__main__':
     main()
