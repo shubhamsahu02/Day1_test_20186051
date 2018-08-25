@@ -16,7 +16,7 @@ def tokenize(string):
 
 
 def main():
-    ''''''
+    '''a'''
     _ = int(input)
     inp_string = input()
     text = ''.join(inp_string)
