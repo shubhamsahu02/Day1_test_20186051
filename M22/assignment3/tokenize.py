@@ -16,6 +16,7 @@ def tokenize(string,lines):
 
 
 def main():
+    ''''''
     lines = int(input)
     inp_string = input()
     text = ''.join(inp_string)
