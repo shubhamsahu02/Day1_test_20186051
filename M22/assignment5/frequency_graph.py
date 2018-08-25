@@ -10,6 +10,7 @@ def frequency_graph(dictionary):
         print(key, "-", dictionary[key] * ('#'))
 
 def main():
+    '''function'''
     dictionary = eval(input())
     frequency_graph(dictionary)
 
