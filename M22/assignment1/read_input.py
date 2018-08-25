@@ -7,7 +7,7 @@ s1 = int(input())
 for i in range (s1):
     s += input() +'\n'
     i += 1
-print s
+print (s)
 
 
 def main():
