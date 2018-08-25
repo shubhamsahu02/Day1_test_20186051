@@ -4,27 +4,22 @@ each word
 '''
 
 def tokenize(string, lines):
-	words = string.split()
-	dict = {}
-	for word in words:
-		if word in dict:
-			dict[word] += 1
-		else:
-			dict[word] = 1
-	return dict
-
-
-
-
-
+    words = string.split()
+    dictionary = {}
+    for word in words:
+        if word in dictionary:
+            dictionary[word] += 1
+        else:
+            dictionary[word] = 1
+    return dictionary
 
             
 def main():
-	lines = int(input)
-	inp_string = input()
-	text = ''.join(inp_string)
-	text.split()
-	print(tokenize(text))
+    lines = int(input)
+    inp_string = input()
+    text = ''.join(inp_string)
+    text.split()
+    print(tokenize(text))
 
 
 
