@@ -3,7 +3,7 @@ Write a function to tokenize a given string and return a dictionary with the fre
 each word
 '''
 
-def tokenize(string,lines):
+def tokenize(string):
     '''function'''
     words = string.split()
     dictionary = {}
