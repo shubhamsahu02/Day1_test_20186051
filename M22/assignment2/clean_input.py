@@ -8,7 +8,7 @@ def clean_string(string):
 
     for i in string:
         s = re.sub('[^A-Za-z0-9]','', string.lower())
-
+        return s
 
    # regex = re.compile('[^A-Za-z0-9]')
    #return [regex.sub('', eachword.strip()) for eachword in string.lower().split(' ')]
