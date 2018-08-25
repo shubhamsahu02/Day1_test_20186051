@@ -1,13 +1,13 @@
 '''
 Write a python program to read multiple lines of text input and store the input into a string.
 '''
-s = ""
-s1 = int(input())
+STR_ING = ""
+ S_1= int(input())
 
-for i in range (s1):
-    s += input() +'\n'
+for i in range(S_1):
+    STR_ING += input() +'\n'
     i += 1
-print (s)
+print (STR_ING)
 
 
 def main():
