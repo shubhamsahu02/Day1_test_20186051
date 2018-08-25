@@ -9,7 +9,6 @@ for i in range(S_1):
     i += 1
 print(STR_ING)
 
-
 def main():
     '''main function'''
 
